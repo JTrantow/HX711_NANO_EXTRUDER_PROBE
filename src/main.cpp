@@ -134,11 +134,7 @@ void loop() {
       Serial.print(" \tSTD ");
       Serial.println(rs.StandardDeviation());
 
-
-
-      rs.Push(sample); // Should I push when triggered????
-
-
+//      rs.Push(sample); // Should I push when triggered????
 
     }else{
     // Sample is within STDs.
@@ -157,9 +153,7 @@ void loop() {
         Serial.println(rs.StandardDeviation());
       }
     }
-
   }
-
 
   /*
     We can use probe enable signal to reset statistics, change rate, or power_on either when probe starts or ends???
@@ -168,12 +162,14 @@ void loop() {
   {    
     if (!probe_enabled)
     {
-//      rs.Clear(); // Reset statistics at beginning of probe deploy
+      rs.Clear(); // Reset statistics at beginning of probe deploy
+      Serial.println("Probe TARE Clear statistics.");
     }
     probe_enabled = true;
-    Serial.println("Probe enable.");
+    Serial.println("Probe TARE.");
   }else if (probe_enabled)
   {
+    Serial.println("Probe TARE done.");
     probe_enabled = false;
   }
   
