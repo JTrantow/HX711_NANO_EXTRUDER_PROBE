@@ -1,0 +1,136 @@
+Using readChannelBlocking()
+
+10 SPS report every 5 seconds.
+
+Adafruit HX711 Based Extruder Nozzle Probe.
+Tareing....
+Gather initial stats....
+Initialized N 10        Mean 9.20       STD 33.90
+        N 50    Mean 10.92      STD 34.63
+        N 100   Mean 32.89      STD 39.25
+        N 150   Mean 50.81      STD 44.62
+        N 200   Mean 70.39      STD 54.29
+        N 250   Mean 89.14      STD 63.11
+        N 300   Mean 108.82     STD 73.95
+        N 350   Mean 129.32     STD 85.68
+        N 400   Mean 147.55     STD 94.02
+        N 450   Mean 165.34     STD 102.54
+        N 500   Mean 182.46     STD 110.60
+        N 550   Mean 198.96     STD 118.00
+        N 600   Mean 215.06     STD 125.24
+        N 650   Mean 230.96     STD 132.75
+        N 700   Mean 246.26     STD 139.51
+        N 750   Mean 262.30     STD 147.83
+        N 800   Mean 278.47     STD 156.41
+        N 850   Mean 295.11     STD 165.93
+        N 900   Mean 312.05     STD 175.92
+        N 950   Mean 328.77     STD 185.52
+        N 1000  Mean 345.27     STD 194.75
+---- Closed the serial port COM5 ----
+---- Opened the serial port COM5 ----
+Adafruit HX711 Based Extruder Nozzle Probe.
+Tareing....
+Gather initial stats....
+Initialized N 10        Mean 30.80      STD 45.66
+        N 50    Mean 34.80      STD 34.26
+        N 100   Mean 51.98      STD 37.42
+        N 150   Mean 67.62      STD 42.25
+        N 200   Mean 82.53      STD 47.40
+        N 250   Mean 96.34      STD 53.29
+        N 300   Mean 110.08     STD 58.87
+        N 350   Mean 124.41     STD 66.10
+        N 400   Mean 140.98     STD 76.67
+        N 450   Mean 157.16     STD 86.48
+        N 500   Mean 173.99     STD 97.03
+        N 550   Mean 190.11     STD 106.08
+        N 600   Mean 206.11     STD 115.15
+        N 650   Mean 222.34     STD 124.38
+        N 700   Mean 238.17     STD 133.05
+        N 750   Mean 253.60     STD 141.17
+        N 800   Mean 268.96     STD 149.25
+        N 850   Mean 284.42     STD 157.66
+        N 900   Mean 299.97     STD 166.26
+        N 950   Mean 315.05     STD 174.15
+        N 1000  Mean 329.58     STD 181.31
+
+        N 1050  Mean 344.26     STD 188.81
+        N 1100  Mean 358.46     STD 195.75
+        N 1150  Mean 372.78     STD 203.02
+        N 1200  Mean 386.92     STD 210.11
+        N 1250  Mean 400.78     STD 216.84
+        N 1300  Mean 414.15     STD 222.96
+        N 1350  Mean 427.76     STD 229.61
+        N 1400  Mean 441.23     STD 236.15
+        N 1450  Mean 454.33     STD 242.25
+        N 1500  Mean 467.56     STD 248.69
+        N 1550  Mean 480.78     STD 255.19
+        N 1600  Mean 493.64     STD 261.26
+        N 1650  Mean 506.65     STD 267.66
+        N 1700  Mean 519.31     STD 273.60
+        N 1750  Mean 533.60     STD 282.42
+        N 1800  Mean 548.94     STD 292.95
+        N 1850  Mean 564.06     STD 302.90
+        N 1900  Mean 579.29     STD 312.97
+        N 1950  Mean 594.01     STD 322.02
+        N 2000  Mean 608.81     STD 331.19
+        N 2050  Mean 623.45     STD 340.02
+        N 2100  Mean 637.54     STD 347.89
+        N 2150  Mean 651.24     STD 355.13
+        N 2200  Mean 664.98     STD 362.50
+        N 2250  Mean 678.05     STD 368.81
+        N 2300  Mean 691.01     STD 375.03
+
+        Using 80 SPS rate, the mean only rises 112 over 10 seconds???? Small STD change.
+
+        Adafruit HX711 Based Extruder Nozzle Probe.
+Tareing....
+Gather initial stats....
+Initialized N 10        Mean 9.50       STD 75.25
+        N 400   Mean -20.90     STD 97.20
+        N 800   Mean -11.49     STD 96.93
+        N 1200  Mean -2.10      STD 99.71
+        N 1600  Mean 6.30       STD 100.05
+        N 2000  Mean 14.26      STD 100.69
+        N 2400  Mean 23.13      STD 102.04
+        N 2800  Mean 31.20      STD 103.72
+        N 3200  Mean 38.74      STD 104.45
+        N 3600  Mean 45.64      STD 106.33
+        N 4000  Mean 50.64      STD 106.33
+        N 4400  Mean 55.72      STD 106.96
+        N 4800  Mean 60.66      STD 107.22
+        N 5200  Mean 65.83      STD 108.16
+        N 5600  Mean 71.48      STD 109.48
+        N 6000  Mean 77.22      STD 110.55
+        N 6400  Mean 82.68      STD 112.11
+        N 6800  Mean 87.80      STD 113.09
+        N 7200  Mean 93.61      STD 114.48
+        N 7600  Mean 100.11     STD 116.57
+        N 8000  Mean 105.76     STD 118.25
+        N 8400  Mean 111.59     STD 120.25
+---- Closed the serial port COM5 ----
+---- Opened the serial port COM5 ----
+Adafruit HX711 Based Extruder Nozzle Probe.
+Tareing....
+Gather initial stats....
+Initialized N 10        Mean 10.80      STD 90.60
+        N 400   Mean 7.32       STD 95.56
+        N 800   Mean 12.27      STD 96.17
+        N 1200  Mean 14.49      STD 97.28
+        N 1600  Mean 27.47      STD 100.47
+        N 2000  Mean 37.16      STD 102.69
+        N 2400  Mean 53.26      STD 109.04
+        N 2800  Mean 67.64      STD 113.00
+        N 3200  Mean 79.20      STD 115.51
+        N 3600  Mean 90.40      STD 117.90
+        N 4000  Mean 99.26      STD 119.15
+        N 4400  Mean 106.45     STD 120.02
+        N 4800  Mean 114.52     STD 120.89
+        N 5200  Mean 121.44     STD 121.38
+        N 5600  Mean 129.45     STD 123.54
+        N 6000  Mean 136.64     STD 124.98
+        N 6400  Mean 144.09     STD 126.80
+        N 6800  Mean 150.48     STD 127.91
+        N 7200  Mean 156.54     STD 128.95
+        N 7600  Mean 162.43     STD 129.90
+        N 8000  Mean 167.99     STD 130.77
+        N 8400  Mean 173.36     STD 131.76
