@@ -1,5 +1,5 @@
 /*!
-    \file TimingTest.cpp
+    \file TimingTest.h
 */
 #pragma once
 
