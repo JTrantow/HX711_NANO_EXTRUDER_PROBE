@@ -55,7 +55,7 @@ bool probe_enable(bool pin_state)
           PROBE_TARE has some delay options but signal goes away when delays are done. (can't be used to power_down()).
         */
         rs.Clear(); // Reset statistics at beginning of probe deploy
-        Serial.println("Probing start. Clear statistics.");
+        Serial.println("Probe TARE start. Clear statistics.");
       #else
         Serial.println("New strategy???");
       #endif
@@ -65,7 +65,7 @@ bool probe_enable(bool pin_state)
   {
     unsigned long toc = millis();
 
-    Serial.print("Probing done ");
+    Serial.print("Probe TARE done ");
     Serial.print(toc-tic);
     Serial.println("[msec].");
     probe_enabled = false;

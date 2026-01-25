@@ -8,16 +8,14 @@
 #include "Probe_enable.h"
 
 // Define the pins for the HX711 communication connection (to Nano)
-const uint8_t HX711_SCK_PIN  = 2;  //!< Output pin connected to HX711, initialized by Adafruit_HX711 class.
-const uint8_t HX711_DATA_PIN = 3; //!< Input pin connected to HX711, initialized by Adafruit_HX711 class.
-//const uint8_t HX711_RATE_PIN = 4; //!< Low results in 10 SPS, High 80 SPS.
-
-const uint8_t PROBE_TRIGGERED_PIN = LED_BUILTIN; //!< Output pin shared with onboard LED (D13 for Nano) which indicates triggered state.
-const uint8_t PROBE_TARE_PIN = 14; //!< Input pin in case you only want to trigger when enabled. (not implemented)
+const uint8_t HX711_SCK_PIN  = 3;  //!< Output pin connected to HX711, initialized by Adafruit_HX711 class.
+const uint8_t HX711_DATA_PIN = 2; //!< Input pin connected to HX711, initialized by Adafruit_HX711 class.
+const uint8_t PROBE_TRIGGERED_PIN = LED_BUILTIN; //!< Output pin that indicates when probe has touched the bed. Use LED pin for visual.
+const uint8_t PROBE_TARE_PIN = 21; //!< Input pin in case you only want to trigger when enabled. 
 
 Adafruit_HX711 hx711(HX711_DATA_PIN, HX711_SCK_PIN); //!< Using the Adafruit library class.
 
-#define SPS (10) //!< Samples per second. HX711 supports 10 or 80 if rate pin is available on the board.
+#define SPS (80) //!< Samples per second. HX711 supports 10 or 80 if rate pin is available on the board.
 #define MINIMUM_SAMPLES (SPS/2)    //!< Minimum number of initial samples before testing samples against STD.
 #define NUM_STD (6) //!< Number of standard deviations used in the comparison window.
 
@@ -48,26 +46,15 @@ void display_statistics(void)
 void setup(){
 
   Serial.begin(115200);
-  Serial.println("Adafruit HX711 Based Extruder Nozzle Probe.");
+  Serial.println("Nano/HX711 Based Extruder Nozzle Probe.");
 
   /*
     Initialize pin Modes and initial states.
   */
-  //pinMode(HX711_RATE_PIN, OUTPUT);
   pinMode(PROBE_TRIGGERED_PIN, OUTPUT);
   pinMode(PROBE_TARE_PIN, INPUT);
 
-  #if defined(ADAFRUIT)
-    #if (10 == SPS)
-      digitalWrite(HX711_RATE_PIN, LOW);   // Start at 10 SPS rate.
-    #elif (80 == SPS)
-      digitalWrite(HX711_RATE_PIN, HIGH); // 80 SPS.
-    #else
-      #error Only 10 and 89 SPS supported by HX711.
-    #endif
-  #endif
   digitalWrite(PROBE_TRIGGERED_PIN, LOW);   
-
   /*
     Initialize the HX711 class.
   */
@@ -90,6 +77,7 @@ void setup(){
 void loop() {
   static bool probe_started = false;
   int32_t sample;
+
   /*
     Read a new sample.
     Don't put triggered outliers into running statistics.
@@ -175,6 +163,8 @@ void loop() {
       Serial.print("TRIGGERED ABS(sample) Channel A (Gain 128): ");
       Serial.println(sample);
       Serial.println(ABSOLUTE_FORCE);
+    }else{
+      digitalWrite(PROBE_TRIGGERED_PIN, LOW); 
     }
     rs.Push(sample);
     // Occasionally(5 seconds) report statistics.
